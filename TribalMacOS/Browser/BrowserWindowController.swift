@@ -12,7 +12,26 @@ extension NSToolbar.Identifier {
 }
 
 class BrowserWindowController: NSWindowController, NSWindowDelegate {
-    lazy var toolbarDelegate = BrowserWindowToolbarDelegate()
+    @objc private let browserController: BrowserController
+    
+    static func create(workspace: Workspace) -> BrowserWindowController {
+        NSStoryboard(name: "Browser", bundle: nil).instantiateInitialController { coder in
+            BrowserWindowController(coder: coder, workspace: workspace)
+        }!
+    }
+    
+    init?(coder: NSCoder, workspace: Workspace) {
+        browserController = BrowserController(workspace: workspace)
+        super.init(coder: coder)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private let observations = ObservationBag()
+    private lazy var toolbarDelegate = BrowserWindowToolbarDelegate()
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -21,10 +40,14 @@ class BrowserWindowController: NSWindowController, NSWindowDelegate {
         configureToolbar(window: window)
         window.subtitle = "You have 8 tasks"
         window.titlebarSeparatorStyle = .none
-        window.setFrameUsingName(window.frameAutosaveName, force: true)
-        window.delegate = self
-        // window.setContentSize(NSSize(width: 1000, height: 600))
-        // window.center()
+        window.contentViewController = BrowserViewController(browserController: browserController)
+        
+        windowFrameAutosaveName = NSWindow.FrameAutosaveName("BrowserWindow")
+     
+        observations.observeNew(\.browserController.selectedProject, in: self, withInitialValue: true) {
+            _self, selectedProject in
+            _self.window?.title = selectedProject?.title ?? "Tribal"
+        }
     }
     
     private func configureToolbar(window: NSWindow) {
@@ -36,10 +59,5 @@ class BrowserWindowController: NSWindowController, NSWindowDelegate {
         toolbar.showsBaselineSeparator = false
         window.toolbarStyle = .unified
         window.toolbar = toolbar
-    }
-    
-    func windowWillClose(_ notification: Notification) {
-        guard let window = window else { return }
-        window.saveFrame(usingName: window.frameAutosaveName)
     }
 }

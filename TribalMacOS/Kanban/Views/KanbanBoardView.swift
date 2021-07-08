@@ -9,31 +9,46 @@ import AppKit
 import SnapKit
 
 class KanbanBoardView: BaseView {
-    var columnWidth: CGFloat = 270 {
+    public var columnWidth: CGFloat = 270 {
         didSet { needsLayout = true }
     }
     
-    var columns: [KanbanColumnView] = []
-    func addColumn(title: String, dataSource: KanbanColumnDataSource) {
+    public private(set) var columns: [KanbanColumn] = []
+    private var dataSources: [KanbanColumnDataSource] = []
+    private var columnViews: [KanbanColumnView] = []
+    
+    public func setColumns(_ columns: [KanbanColumn]) {
+        columnViews.forEach { $0.removeFromSuperview() }
+        self.columns = columns
+        
+        columns.forEach(addColumn(_:))
+        needsLayout = true
+    }
+    
+    override var isFlipped: Bool { true }
+    public func addColumn(_ column: KanbanColumn) {
+        let dataSource = KanbanColumnDataSource(tasks: column.tasks)
+        dataSources.append(dataSource)
+        
         let columnView = KanbanColumnView()
-        columnView.title = title
+        columnView.title = column.title
         columnView.dataSource = dataSource
         columnView.columnWidth = columnWidth
 
-        let index = columns.count
+        let index = columnViews.count
         columnView.frame = CGRect(x: CGFloat(index) * columnWidth, y: 0, width: columnWidth, height: bounds.height)
         columnView.autoresizingMask = [.height]
-        columns.append(columnView)
+        columnViews.append(columnView)
         
         addSubview(columnView)
         frame.size.width = width
     }
     
-    var width: CGFloat {
-        CGFloat(columns.count) * columnWidth
+    public var width: CGFloat {
+        CGFloat(columnViews.count) * columnWidth
     }
     
-    override var intrinsicContentSize: NSSize {
+    public override var intrinsicContentSize: NSSize {
         CGSize(width: width, height: NSView.noIntrinsicMetric)
     }
 }

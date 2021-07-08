@@ -7,29 +7,25 @@
 
 import AppKit
 
-class KanbanViewController: NSViewController {
-    lazy var kanbanView = KanbanView()
-    var boardView: KanbanBoardView { kanbanView.boardView }
+class KanbanViewController: BaseViewController {
+    @objc public let board: KanbanBoard
+    private let observations = ObservationBag()
+    init(board: KanbanBoard) {
+        self.board = board
+        super.init()
+    }
     
-    override func loadView() {
+    private lazy var kanbanView = KanbanView()
+    public override func loadView() {
         view = kanbanView
     }
     
-    var dataSources: [KanbanColumnDataSource] = [
-        .init(tasks: Demo.tasks.shuffled()),
-        .init(tasks: Demo.tasks.shuffled()),
-        .init(tasks: Demo.tasks.shuffled()),
-        .init(tasks: Demo.tasks.shuffled()),
-        .init(tasks: Demo.tasks.shuffled()),
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        boardView.addColumn(title: "To Do", dataSource: dataSources[0])
-        boardView.addColumn(title: "Build / Design Differences", dataSource: dataSources[1])
-        boardView.addColumn(title: "In Progress", dataSource: dataSources[2])
-        boardView.addColumn(title: "Done", dataSource: dataSources[3])
-        boardView.addColumn(title: "Backlog", dataSource: dataSources[4])
+        observations.observeNew(\.board.columns, in: self, withInitialValue: true) {
+            _self, columns in
+            _self.kanbanView.boardView.setColumns(columns)
+            _self.view.needsLayout = true
+        }
     }
 }

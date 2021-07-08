@@ -1,44 +1,18 @@
 //
-//  TaskCard.swift
+//  TaskCardView.swift
 //  TribalMacOS
 //
-//  Created by Umur Gedik on 3.07.2021.
+//  Created by Umur Gedik on 8.07.2021.
 //
 
 import AppKit
-import Nuke
-import PinLayout
-import TribalCore
 
-// MARK: - Item
-public class TaskCard: NSCollectionViewItem, UserInterfaceIdentifiable {
-    public func setTask(_ task: Task, coverImage: NSImage?) {
-        cardView.configure(with: task, coverImage: coverImage)
-    }
-
-    // MARK: - View Hierarchy
-    lazy var cardView = TaskCardView()
-    public override func loadView() {
-        view = cardView
-    }
-    
-    // MARK: - Layout
-    public override func preferredLayoutAttributesFitting(_ layoutAttributes: NSCollectionViewLayoutAttributes) -> NSCollectionViewLayoutAttributes {
-        let attributes = super.preferredLayoutAttributesFitting(layoutAttributes)
-        let height = cardView.heightForWidth(layoutAttributes.size.width)
-        
-        if layoutAttributes.size.height != height {
-            attributes.size.height = height
-        }
-        
-        return attributes
-    }
-}
-
-// MARK: - View
 public class TaskCardView: Background {
-    
     // MARK: - State
+    public var isSelected: Bool = false {
+        didSet { updateSelectionUI() }
+    }
+
     public func configure(with task: Task, coverImage: NSImage? = nil) {
         titleLabel.stringValue = task.title
         
@@ -56,12 +30,15 @@ public class TaskCardView: Background {
     }
     
     // MARK: - View Hierarchy
+    private var selectionView: TaskCardSelectionView?
     private let coverImageView = ImageView()
     private let dueLabel = TaskDueLabel()
     private let titleLabel = NSTextField(wrappingLabelWithString: "").configure {
         $0.isSelectable = false
         $0.font = .systemFont(ofSize: 14)
     }
+    
+    // public override var wantsDefaultClipping: Bool { false }
 
     public override func setupViewHierarchy() {
         cornerRadius = 4
@@ -87,14 +64,35 @@ public class TaskCardView: Background {
         }
     }
     
+    private func updateSelectionUI() {
+        switch (isSelected, selectionView) {
+        case (true, nil):
+            let view = TaskCardSelectionView()
+            animator().addSubview(view)
+            selectionView = view
+            needsLayout = true
+            
+        case let (false, view?):
+            view.animator().removeFromSuperview()
+            selectionView = nil
+            
+        default:
+            return
+        }
+    }
+    
     // MARK: - Layout
     private enum Metrics {
-        static let contentInsets = NSEdgeInsets(top: 7, left: 16, bottom: 7, right: 16)
+        static let contentInsets = NSEdgeInsets(top: 12, left: 16, bottom: 7, right: 16)
     }
     
     public override var isFlipped: Bool { true }
     public override func layout() {
         super.layout()
+        
+        if let selectionView = selectionView {
+            selectionView.frame = bounds
+        }
         
         var contentRect = bounds
         if !coverImageView.isHidden, let image = coverImageView.image {
@@ -113,7 +111,7 @@ public class TaskCardView: Background {
             dueLabel.setFrameOrigin(contentRect.origin)
             dueLabel.frame.size.width = min(dueLabel.frame.width, contentRect.width)
         
-            contentRect = contentRect.consumeHeight(dueLabel.bounds.height + 3, isFlipped: true)
+            contentRect = contentRect.consumeHeight(dueLabel.bounds.height, isFlipped: true)
         } else {
             contentRect = contentRect.consumeHeight(6, isFlipped: true)
         }
@@ -133,7 +131,7 @@ public class TaskCardView: Background {
         
         height += Metrics.contentInsets.top
         if !dueLabel.isHidden {
-            height += dueLabel.fittingSize.height + 3
+            height += dueLabel.fittingSize.height
         } else {
             height += 6
         }
@@ -144,3 +142,4 @@ public class TaskCardView: Background {
         return height
     }
 }
+

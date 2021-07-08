@@ -7,10 +7,6 @@
 
 import AppKit
 
-fileprivate class FlippedClipView: NSClipView {
-    override var isFlipped: Bool { true }
-}
-
 class KanbanColumnView: BaseView {
     public var dataSource: KanbanColumnDataSource? {
         get { collectionView.dataSource as? KanbanColumnDataSource }
@@ -48,24 +44,20 @@ class KanbanColumnView: BaseView {
     private let rightBorder = NSBox.divider()
     
     private let columnLayout = KanbanColumnLayout()
-    private let collectionView = NSCollectionView().configure {
-        $0.backgroundColors = [.windowBackgroundColor, .windowBackgroundColor]
-    }
+    private let collectionView = KanbanColumnCollectionView()
+    private let collectionViewDelegate = KanbanColumnCollectionViewDelegate()
     
     private let scrollDivider = NSBox.divider()
     private let scrollView = OrientedScrollView().configure {
         $0.contentView.postsBoundsChangedNotifications = true
-        $0.automaticallyAdjustsContentInsets = true
-        $0.hasVerticalScroller = false
-        $0.verticalScroller = nil
-        $0.contentView = FlippedClipView()
         $0.backgroundColor = .windowBackgroundColor
     }
     
     override func setupViewHierarchy() {
         collectionView.collectionViewLayout = columnLayout
-        collectionView.register(TaskCard.self)
+        collectionView.register(TaskCardItem.self)
         collectionView.dataSource = dataSource
+        collectionView.delegate = collectionViewDelegate
         
         scrollView.documentView = collectionView
         scrollView.additionalSafeAreaInsets.top = 40

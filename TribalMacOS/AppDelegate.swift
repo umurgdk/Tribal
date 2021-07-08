@@ -10,7 +10,15 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        let workspace = Workspace(projects: [
+            Project(title: "Boom macOS", tasks: Demo.tasks.shuffled()),
+            Project(title: "Boom iOS", tasks: Demo.tasks.shuffled())
+        ])
+        
+        let browserWC = BrowserWindowController.create(workspace: workspace)
+        browserWC.showWindow(self)
+        
+        WindowCoordinator.shared.add(browserWC)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

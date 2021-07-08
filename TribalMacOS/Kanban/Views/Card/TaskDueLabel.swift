@@ -50,7 +50,7 @@ class TaskDueLabel: BaseView {
         
         iconView.setFrameOrigin(NSPoint(x: 0, y: bounds.midY - iconView.bounds.midY))
         dueLabel.sizeToFit()
-        dueLabel.setFrameOrigin(NSPoint(x: iconView.frame.maxX + 4, y: bounds.midY - dueLabel.bounds.midY))
+        dueLabel.setFrameOrigin(NSPoint(x: iconView.frame.maxX + 2, y: bounds.midY - dueLabel.bounds.midY))
         dueLabel.frame.size.width = bounds.width - dueLabel.frame.minX
     }
     
@@ -64,7 +64,7 @@ class TaskDueLabel: BaseView {
         
         let iconSize = iconView.fittingSize
         let labelSize = dueLabel.fittingSize
-        let width = iconSize.width + 4 + labelSize.width
+        let width = iconSize.width + 2 + labelSize.width
         let height = max(iconSize.height, labelSize.height)
         cachedFittingSize = CGSize(width: width, height: height)
         return cachedFittingSize!

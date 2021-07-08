@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A928DFCD2696887100E583C6 /* TaskCardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928DFCC2696887100E583C6 /* TaskCardSelectionView.swift */; };
+		A928DFCF26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928DFCE26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift */; };
+		A928DFD126968D2500E583C6 /* TaskCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928DFD026968D2500E583C6 /* TaskCardView.swift */; };
 		A9391683268FE57D00FD0652 /* zeynep.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9391682268FE57D00FD0652 /* zeynep.jpg */; };
 		A9391685268FE58A00FD0652 /* umur.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A9391684268FE58A00FD0652 /* umur.jpeg */; };
 		A9391699268FEFD700FD0652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9391698268FEFD700FD0652 /* AppDelegate.swift */; };
-		A939169B268FEFD700FD0652 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A939169A268FEFD700FD0652 /* ViewController.swift */; };
 		A939169D268FEFD900FD0652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A939169C268FEFD900FD0652 /* Assets.xcassets */; };
 		A93916A0268FEFD900FD0652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A939169E268FEFD900FD0652 /* Main.storyboard */; };
 		A93916A8268FF01100FD0652 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916A7268FF01100FD0652 /* Initialization.swift */; };
-		A93916B4268FF15100FD0652 /* TribalCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A93916B2268FF15100FD0652 /* TribalCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A93916BE268FF1A600FD0652 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916BD268FF1A600FD0652 /* Entities.swift */; };
 		A93916C1268FF25800FD0652 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A93916C0268FF25800FD0652 /* SnapKit */; };
 		A93916C6268FF5A100FD0652 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = A93916C5268FF5A100FD0652 /* Nuke */; };
 		A93916C8268FF69900FD0652 /* UserInterfaceIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916C7268FF69900FD0652 /* UserInterfaceIdentifiable.swift */; };
-		A93916CB268FF8A700FD0652 /* TaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916CA268FF8A700FD0652 /* TaskCard.swift */; };
+		A93916CB268FF8A700FD0652 /* TaskCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916CA268FF8A700FD0652 /* TaskCardItem.swift */; };
 		A93916CD268FF8D300FD0652 /* KanbanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916CC268FF8D300FD0652 /* KanbanViewController.swift */; };
 		A93916D1268FF98300FD0652 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916D0268FF98300FD0652 /* ImageView.swift */; };
 		A93916D42690A31500FD0652 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916D32690A31500FD0652 /* BrowserViewController.swift */; };
@@ -27,8 +27,6 @@
 		A93916D82690A3A900FD0652 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916D72690A3A900FD0652 /* Popup.swift */; };
 		A93916DB2690B21B00FD0652 /* TribalDemoContent.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A939167B268FE56600FD0652 /* TribalDemoContent.bundle */; };
 		A93916DD2690B22900FD0652 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916DC2690B22900FD0652 /* Demo.swift */; };
-		A93916DF2690B38700FD0652 /* TribalCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93916B0268FF15000FD0652 /* TribalCore.framework */; };
-		A93916E02690B38700FD0652 /* TribalCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A93916B0268FF15000FD0652 /* TribalCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A93916E52690DB8E00FD0652 /* NSView+ascender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916E42690DB8E00FD0652 /* NSView+ascender.swift */; };
 		A93916E72690E60D00FD0652 /* BrowserWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916E62690E60D00FD0652 /* BrowserWindowController.swift */; };
 		A93916E92690EB3700FD0652 /* SideNavigationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916E82690EB3700FD0652 /* SideNavigationDataSource.swift */; };
@@ -48,6 +46,21 @@
 		A93917092692254B00FD0652 /* KanbanColumnCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93917082692254B00FD0652 /* KanbanColumnCollectionView.swift */; };
 		A939170B26922E8D00FD0652 /* CoreGraphics+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A939170A26922E8D00FD0652 /* CoreGraphics+Geometry.swift */; };
 		A93917102692470A00FD0652 /* KanbanColumnDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A939170F2692470A00FD0652 /* KanbanColumnDataSource.swift */; };
+		A97545772696908E007CC859 /* KanbanBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97545762696908E007CC859 /* KanbanBoard.swift */; };
+		A975457A2696910A007CC859 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97545792696910A007CC859 /* Project.swift */; };
+		A975457C269691C5007CC859 /* KanbanColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975457B269691C5007CC859 /* KanbanColumn.swift */; };
+		A9C114AF2696C90100510A9C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114AE2696C90100510A9C /* BaseViewController.swift */; };
+		A9C114B12696CA1B00510A9C /* KanbanColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114B02696CA1B00510A9C /* KanbanColumnViewController.swift */; };
+		A9C114B72696D75900510A9C /* BrowserContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114B62696D75900510A9C /* BrowserContentViewController.swift */; };
+		A9C114BB2696E54C00510A9C /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114BA2696E54C00510A9C /* Workspace.swift */; };
+		A9C114BD2696E62C00510A9C /* Browser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C114BC2696E62C00510A9C /* Browser.storyboard */; };
+		A9C114BF2696E81C00510A9C /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114BE2696E81C00510A9C /* WindowCoordinator.swift */; };
+		A9C114C22696F73800510A9C /* BrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C12696F73800510A9C /* BrowserController.swift */; };
+		A9C114C42696F78D00510A9C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C32696F78D00510A9C /* Task.swift */; };
+		A9C114C62696F7A200510A9C /* TaskTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C52696F7A200510A9C /* TaskTag.swift */; };
+		A9C114C82696F7AF00510A9C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C72696F7AF00510A9C /* Profile.swift */; };
+		A9C114CA2696F90D00510A9C /* SideNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C92696F90D00510A9C /* SideNavigationView.swift */; };
+		A9C114CE2697205D00510A9C /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114CD2697205D00510A9C /* Observation.swift */; };
 		A9F09BC72692AD0E00C8FF6B /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A9F09BC62692AD0E00C8FF6B /* PinLayout */; };
 /* End PBXBuildFile section */
 
@@ -59,13 +72,6 @@
 			remoteGlobalIDString = A939167A268FE56600FD0652;
 			remoteInfo = TribalDemoContent;
 		};
-		A93916E12690B38700FD0652 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9391655268FC1B300FD0652 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A93916AF268FF15000FD0652;
-			remoteInfo = TribalCore;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +81,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A93916E02690B38700FD0652 /* TribalCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,24 +88,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A928DFCC2696887100E583C6 /* TaskCardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardSelectionView.swift; sourceTree = "<group>"; };
+		A928DFCE26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumnCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		A928DFD026968D2500E583C6 /* TaskCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardView.swift; sourceTree = "<group>"; };
 		A939167B268FE56600FD0652 /* TribalDemoContent.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TribalDemoContent.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A939167D268FE56600FD0652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9391682268FE57D00FD0652 /* zeynep.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zeynep.jpg; sourceTree = "<group>"; };
 		A9391684268FE58A00FD0652 /* umur.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = umur.jpeg; sourceTree = "<group>"; };
 		A9391696268FEFD700FD0652 /* TribalMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TribalMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9391698268FEFD700FD0652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A939169A268FEFD700FD0652 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A939169C268FEFD900FD0652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A939169F268FEFD900FD0652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A93916A1268FEFD900FD0652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93916A2268FEFD900FD0652 /* TribalMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TribalMacOS.entitlements; sourceTree = "<group>"; };
 		A93916A7268FF01100FD0652 /* Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
-		A93916B0268FF15000FD0652 /* TribalCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TribalCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A93916B2268FF15100FD0652 /* TribalCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TribalCore.h; sourceTree = "<group>"; };
-		A93916B3268FF15100FD0652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A93916BD268FF1A600FD0652 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		A93916C7268FF69900FD0652 /* UserInterfaceIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterfaceIdentifiable.swift; sourceTree = "<group>"; };
-		A93916CA268FF8A700FD0652 /* TaskCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCard.swift; sourceTree = "<group>"; };
+		A93916CA268FF8A700FD0652 /* TaskCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardItem.swift; sourceTree = "<group>"; };
 		A93916CC268FF8D300FD0652 /* KanbanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanViewController.swift; sourceTree = "<group>"; };
 		A93916D0268FF98300FD0652 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		A93916D32690A31500FD0652 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +129,21 @@
 		A93917082692254B00FD0652 /* KanbanColumnCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumnCollectionView.swift; sourceTree = "<group>"; };
 		A939170A26922E8D00FD0652 /* CoreGraphics+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Geometry.swift"; sourceTree = "<group>"; };
 		A939170F2692470A00FD0652 /* KanbanColumnDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumnDataSource.swift; sourceTree = "<group>"; };
+		A97545762696908E007CC859 /* KanbanBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoard.swift; sourceTree = "<group>"; };
+		A97545792696910A007CC859 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		A975457B269691C5007CC859 /* KanbanColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumn.swift; sourceTree = "<group>"; };
+		A9C114AE2696C90100510A9C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A9C114B02696CA1B00510A9C /* KanbanColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumnViewController.swift; sourceTree = "<group>"; };
+		A9C114B62696D75900510A9C /* BrowserContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserContentViewController.swift; sourceTree = "<group>"; };
+		A9C114BA2696E54C00510A9C /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
+		A9C114BC2696E62C00510A9C /* Browser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Browser.storyboard; sourceTree = "<group>"; };
+		A9C114BE2696E81C00510A9C /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
+		A9C114C12696F73800510A9C /* BrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserController.swift; sourceTree = "<group>"; };
+		A9C114C32696F78D00510A9C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A9C114C52696F7A200510A9C /* TaskTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTag.swift; sourceTree = "<group>"; };
+		A9C114C72696F7AF00510A9C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A9C114C92696F90D00510A9C /* SideNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideNavigationView.swift; sourceTree = "<group>"; };
+		A9C114CD2697205D00510A9C /* Observation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,16 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93916C1268FF25800FD0652 /* SnapKit in Frameworks */,
-				A93916DF2690B38700FD0652 /* TribalCore.framework in Frameworks */,
 				A9F09BC72692AD0E00C8FF6B /* PinLayout in Frameworks */,
 				A93916C6268FF5A100FD0652 /* Nuke in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A93916AD268FF15000FD0652 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +172,6 @@
 			children = (
 				A939167C268FE56600FD0652 /* TribalDemoContent */,
 				A9391697268FEFD700FD0652 /* TribalMacOS */,
-				A93916B1268FF15100FD0652 /* TribalCore */,
 				A939165E268FC1B300FD0652 /* Products */,
 				A93916DE2690B38700FD0652 /* Frameworks */,
 			);
@@ -173,7 +182,6 @@
 			children = (
 				A939167B268FE56600FD0652 /* TribalDemoContent.bundle */,
 				A9391696268FEFD700FD0652 /* TribalMacOS.app */,
-				A93916B0268FF15000FD0652 /* TribalCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,16 +207,14 @@
 		A9391697268FEFD700FD0652 /* TribalMacOS */ = {
 			isa = PBXGroup;
 			children = (
+				A9C114C02696E9DE00510A9C /* Resources */,
+				A9754578269690E8007CC859 /* Entities */,
 				A93916A6268FF00400FD0652 /* Extensions */,
 				A93916CE268FF96200FD0652 /* Components */,
 				A93916D22690A30500FD0652 /* Browser */,
 				A93916C9268FF89800FD0652 /* Kanban */,
 				A9391698268FEFD700FD0652 /* AppDelegate.swift */,
-				A939169A268FEFD700FD0652 /* ViewController.swift */,
-				A939169C268FEFD900FD0652 /* Assets.xcassets */,
-				A939169E268FEFD900FD0652 /* Main.storyboard */,
-				A93916A1268FEFD900FD0652 /* Info.plist */,
-				A93916A2268FEFD900FD0652 /* TribalMacOS.entitlements */,
+				A9C114BE2696E81C00510A9C /* WindowCoordinator.swift */,
 				A93916DC2690B22900FD0652 /* Demo.swift */,
 			);
 			path = TribalMacOS;
@@ -226,21 +232,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A93916B1268FF15100FD0652 /* TribalCore */ = {
-			isa = PBXGroup;
-			children = (
-				A93916B2268FF15100FD0652 /* TribalCore.h */,
-				A93916B3268FF15100FD0652 /* Info.plist */,
-				A93916BD268FF1A600FD0652 /* Entities.swift */,
-			);
-			path = TribalCore;
-			sourceTree = "<group>";
-		};
 		A93916C9268FF89800FD0652 /* Kanban */ = {
 			isa = PBXGroup;
 			children = (
 				A939170E269246FA00FD0652 /* DataSources */,
 				A93917012691FFBE00FD0652 /* Views */,
+				A97545762696908E007CC859 /* KanbanBoard.swift */,
+				A975457B269691C5007CC859 /* KanbanColumn.swift */,
 			);
 			path = Kanban;
 			sourceTree = "<group>";
@@ -249,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				A93916CF268FF96D00FD0652 /* Basic */,
+				A9C114CD2697205D00510A9C /* Observation.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -262,6 +261,7 @@
 				A93916F92691375400FD0652 /* BaseView.swift */,
 				A93916FB269145D900FD0652 /* Divider.swift */,
 				A93916FD2691536600FD0652 /* Background.swift */,
+				A9C114AE2696C90100510A9C /* BaseViewController.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -269,12 +269,16 @@
 		A93916D22690A30500FD0652 /* Browser */ = {
 			isa = PBXGroup;
 			children = (
+				A9C114BC2696E62C00510A9C /* Browser.storyboard */,
+				A9C114B62696D75900510A9C /* BrowserContentViewController.swift */,
+				A9C114C12696F73800510A9C /* BrowserController.swift */,
 				A93916FF2691E73600FD0652 /* BrowserMenu.swift */,
 				A93916D32690A31500FD0652 /* BrowserViewController.swift */,
 				A93916E62690E60D00FD0652 /* BrowserWindowController.swift */,
 				A93916EA2691236200FD0652 /* BrowserWindowToolbarDelegate.swift */,
 				A93916D52690A35A00FD0652 /* SideNavigationController.swift */,
 				A93916E82690EB3700FD0652 /* SideNavigationDataSource.swift */,
+				A9C114C92696F90D00510A9C /* SideNavigationView.swift */,
 			);
 			path = Browser;
 			sourceTree = "<group>";
@@ -289,10 +293,12 @@
 		A93916F626912FDA00FD0652 /* ColumnView */ = {
 			isa = PBXGroup;
 			children = (
-				A93916EE26912D9200FD0652 /* KanbanColumnLayout.swift */,
-				A93916F026912DBF00FD0652 /* KanbanColumnHeader.swift */,
-				A93916F72691300A00FD0652 /* KanbanColumnView.swift */,
 				A93917082692254B00FD0652 /* KanbanColumnCollectionView.swift */,
+				A928DFCE26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift */,
+				A93916F026912DBF00FD0652 /* KanbanColumnHeader.swift */,
+				A93916EE26912D9200FD0652 /* KanbanColumnLayout.swift */,
+				A93916F72691300A00FD0652 /* KanbanColumnView.swift */,
+				A9C114B02696CA1B00510A9C /* KanbanColumnViewController.swift */,
 			);
 			path = ColumnView;
 			sourceTree = "<group>";
@@ -312,7 +318,9 @@
 		A93917022692001900FD0652 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				A93916CA268FF8A700FD0652 /* TaskCard.swift */,
+				A93916CA268FF8A700FD0652 /* TaskCardItem.swift */,
+				A928DFD026968D2500E583C6 /* TaskCardView.swift */,
+				A928DFCC2696887100E583C6 /* TaskCardSelectionView.swift */,
 				A93917032692003700FD0652 /* TaskDueLabel.swift */,
 			);
 			path = Card;
@@ -326,18 +334,30 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		A93916AB268FF15000FD0652 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A93916B4268FF15100FD0652 /* TribalCore.h in Headers */,
+		A9754578269690E8007CC859 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A97545792696910A007CC859 /* Project.swift */,
+				A9C114BA2696E54C00510A9C /* Workspace.swift */,
+				A9C114C32696F78D00510A9C /* Task.swift */,
+				A9C114C52696F7A200510A9C /* TaskTag.swift */,
+				A9C114C72696F7AF00510A9C /* Profile.swift */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			path = Entities;
+			sourceTree = "<group>";
 		};
-/* End PBXHeadersBuildPhase section */
+		A9C114C02696E9DE00510A9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A939169E268FEFD900FD0652 /* Main.storyboard */,
+				A939169C268FEFD900FD0652 /* Assets.xcassets */,
+				A93916A1268FEFD900FD0652 /* Info.plist */,
+				A93916A2268FEFD900FD0652 /* TribalMacOS.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		A939167A268FE56600FD0652 /* TribalDemoContent */ = {
@@ -370,7 +390,6 @@
 			);
 			dependencies = (
 				A93916DA2690B20E00FD0652 /* PBXTargetDependency */,
-				A93916E22690B38700FD0652 /* PBXTargetDependency */,
 			);
 			name = TribalMacOS;
 			packageProductDependencies = (
@@ -381,24 +400,6 @@
 			productName = TribalMacOS;
 			productReference = A9391696268FEFD700FD0652 /* TribalMacOS.app */;
 			productType = "com.apple.product-type.application";
-		};
-		A93916AF268FF15000FD0652 /* TribalCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A93916B9268FF15100FD0652 /* Build configuration list for PBXNativeTarget "TribalCore" */;
-			buildPhases = (
-				A93916AB268FF15000FD0652 /* Headers */,
-				A93916AC268FF15000FD0652 /* Sources */,
-				A93916AD268FF15000FD0652 /* Frameworks */,
-				A93916AE268FF15000FD0652 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TribalCore;
-			productName = TribalCore;
-			productReference = A93916B0268FF15000FD0652 /* TribalCore.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -414,10 +415,6 @@
 					};
 					A9391695268FEFD700FD0652 = {
 						CreatedOnToolsVersion = 12.5.1;
-					};
-					A93916AF268FF15000FD0652 = {
-						CreatedOnToolsVersion = 12.5.1;
-						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -442,7 +439,6 @@
 			targets = (
 				A939167A268FE56600FD0652 /* TribalDemoContent */,
 				A9391695268FEFD700FD0652 /* TribalMacOS */,
-				A93916AF268FF15000FD0652 /* TribalCore */,
 			);
 		};
 /* End PBXProject section */
@@ -462,15 +458,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93916DB2690B21B00FD0652 /* TribalDemoContent.bundle in Resources */,
+				A9C114BD2696E62C00510A9C /* Browser.storyboard in Resources */,
 				A939169D268FEFD900FD0652 /* Assets.xcassets in Resources */,
 				A93916A0268FEFD900FD0652 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A93916AE268FF15000FD0652 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,25 +480,35 @@
 			files = (
 				A93916E52690DB8E00FD0652 /* NSView+ascender.swift in Sources */,
 				A93916D1268FF98300FD0652 /* ImageView.swift in Sources */,
+				A9C114BF2696E81C00510A9C /* WindowCoordinator.swift in Sources */,
 				A93916D62690A35A00FD0652 /* SideNavigationController.swift in Sources */,
+				A975457C269691C5007CC859 /* KanbanColumn.swift in Sources */,
 				A93917102692470A00FD0652 /* KanbanColumnDataSource.swift in Sources */,
+				A928DFD126968D2500E583C6 /* TaskCardView.swift in Sources */,
 				A93916EF26912D9200FD0652 /* KanbanColumnLayout.swift in Sources */,
+				A9C114B72696D75900510A9C /* BrowserContentViewController.swift in Sources */,
 				A93916D82690A3A900FD0652 /* Popup.swift in Sources */,
 				A93916D42690A31500FD0652 /* BrowserViewController.swift in Sources */,
 				A93916E92690EB3700FD0652 /* SideNavigationDataSource.swift in Sources */,
 				A93916DD2690B22900FD0652 /* Demo.swift in Sources */,
-				A93916CB268FF8A700FD0652 /* TaskCard.swift in Sources */,
+				A93916CB268FF8A700FD0652 /* TaskCardItem.swift in Sources */,
+				A9C114B12696CA1B00510A9C /* KanbanColumnViewController.swift in Sources */,
 				A93916FA2691375400FD0652 /* BaseView.swift in Sources */,
+				A9C114C82696F7AF00510A9C /* Profile.swift in Sources */,
+				A9C114C22696F73800510A9C /* BrowserController.swift in Sources */,
 				A93917092692254B00FD0652 /* KanbanColumnCollectionView.swift in Sources */,
+				A928DFCD2696887100E583C6 /* TaskCardSelectionView.swift in Sources */,
 				A93916CD268FF8D300FD0652 /* KanbanViewController.swift in Sources */,
 				A93916FE2691536600FD0652 /* Background.swift in Sources */,
 				A939170B26922E8D00FD0652 /* CoreGraphics+Geometry.swift in Sources */,
 				A93916EB2691236200FD0652 /* BrowserWindowToolbarDelegate.swift in Sources */,
 				A93916A8268FF01100FD0652 /* Initialization.swift in Sources */,
-				A939169B268FEFD700FD0652 /* ViewController.swift in Sources */,
 				A93916C8268FF69900FD0652 /* UserInterfaceIdentifiable.swift in Sources */,
+				A9C114AF2696C90100510A9C /* BaseViewController.swift in Sources */,
 				A93917042692003700FD0652 /* TaskDueLabel.swift in Sources */,
+				A9C114BB2696E54C00510A9C /* Workspace.swift in Sources */,
 				A9391699268FEFD700FD0652 /* AppDelegate.swift in Sources */,
+				A9C114CE2697205D00510A9C /* Observation.swift in Sources */,
 				A93916F82691300A00FD0652 /* KanbanColumnView.swift in Sources */,
 				A9391706269200C300FD0652 /* NSImage+symbol.swift in Sources */,
 				A93916F126912DBF00FD0652 /* KanbanColumnHeader.swift in Sources */,
@@ -517,15 +517,13 @@
 				A93916F526912E0B00FD0652 /* KanbanView.swift in Sources */,
 				A93916ED26912D5B00FD0652 /* KanbanBoardView.swift in Sources */,
 				A93916E72690E60D00FD0652 /* BrowserWindowController.swift in Sources */,
+				A97545772696908E007CC859 /* KanbanBoard.swift in Sources */,
+				A928DFCF26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift in Sources */,
+				A9C114C42696F78D00510A9C /* Task.swift in Sources */,
 				A93916FC269145D900FD0652 /* Divider.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A93916AC268FF15000FD0652 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A93916BE268FF1A600FD0652 /* Entities.swift in Sources */,
+				A9C114CA2696F90D00510A9C /* SideNavigationView.swift in Sources */,
+				A975457A2696910A007CC859 /* Project.swift in Sources */,
+				A9C114C62696F7A200510A9C /* TaskTag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,11 +534,6 @@
 			isa = PBXTargetDependency;
 			target = A939167A268FE56600FD0652 /* TribalDemoContent */;
 			targetProxy = A93916D92690B20E00FD0652 /* PBXContainerItemProxy */;
-		};
-		A93916E22690B38700FD0652 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A93916AF268FF15000FD0652 /* TribalCore */;
-			targetProxy = A93916E12690B38700FD0652 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -706,12 +699,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TribalMacOS/TribalMacOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TribalMacOS/Resources/TribalMacOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8STHWE4QY7;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = TribalMacOS/Info.plist;
+				INFOPLIST_FILE = TribalMacOS/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -727,12 +720,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TribalMacOS/TribalMacOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TribalMacOS/Resources/TribalMacOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8STHWE4QY7;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = TribalMacOS/Info.plist;
+				INFOPLIST_FILE = TribalMacOS/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -740,63 +733,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.TribalMacOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		A93916BA268FF15100FD0652 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8STHWE4QY7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TribalCore/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.TribalCore;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A93916BB268FF15100FD0652 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8STHWE4QY7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TribalCore/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.TribalCore;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -826,15 +762,6 @@
 			buildConfigurations = (
 				A93916A4268FEFD900FD0652 /* Debug */,
 				A93916A5268FEFD900FD0652 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A93916B9268FF15100FD0652 /* Build configuration list for PBXNativeTarget "TribalCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A93916BA268FF15100FD0652 /* Debug */,
-				A93916BB268FF15100FD0652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

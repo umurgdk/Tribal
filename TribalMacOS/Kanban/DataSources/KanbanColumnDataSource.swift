@@ -7,7 +7,6 @@
 
 import AppKit
 import Nuke
-import TribalCore
 
 class KanbanColumnDataSource: NSObject, NSCollectionViewDataSource {
     public var tasks: [Task] = []
@@ -53,7 +52,7 @@ class KanbanColumnDataSource: NSObject, NSCollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let cell = collectionView.makeItem(TaskCard.self, for: indexPath)
+        let cell = collectionView.makeItem(TaskCardItem.self, for: indexPath)
         let task = tasks[indexPath.item % tasks.count]
         if let imageURL = task.coverImageURL, let image = loadImage(with: imageURL, for: indexPath) {
             cell.setTask(task, coverImage: image)

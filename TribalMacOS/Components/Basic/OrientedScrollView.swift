@@ -7,33 +7,26 @@
 
 import AppKit
 
-class OrientedScrollView: NSScrollView {
-    var axis: NSEvent.GestureAxis = .vertical
-    var isLiveResizing = false
+fileprivate class FlippedClipView: NSClipView {
+    override var isFlipped: Bool { true }
+}
+
+public class OrientedScrollView: NSScrollView {
+    public var axis: NSEvent.GestureAxis = .vertical
     
-    override class var isCompatibleWithResponsiveScrolling: Bool { true }
+    public override class var isCompatibleWithResponsiveScrolling: Bool { true }
     
-    var originalScroller: NSScroller?
-    override func viewWillStartLiveResize() {
-        isLiveResizing = true
-        originalScroller = verticalScroller
-        super.viewWillStartLiveResize()
+    public init() {
+        super.init(frame: .zero)
+        contentView = FlippedClipView()
     }
     
-    override func viewDidEndLiveResize() {
-        isLiveResizing = false
-        verticalScroller = originalScroller
-        originalScroller = nil
-        flashScrollers()
-        super.viewDidEndLiveResize()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        contentView = FlippedClipView()
     }
     
-    override func flashScrollers() {
-        guard !isLiveResizing else { return }
-        super.flashScrollers()
-    }
-    
-    override func scrollWheel(with event: NSEvent) {
+    public override func scrollWheel(with event: NSEvent) {
         if event.phase == NSEvent.Phase.mayBegin {
             super.scrollWheel(with: event)
             nextResponder?.scrollWheel(with: event)

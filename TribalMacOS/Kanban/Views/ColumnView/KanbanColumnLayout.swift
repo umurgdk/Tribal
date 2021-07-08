@@ -34,7 +34,6 @@ class KanbanColumnLayout: NSCollectionViewLayout {
         let numItems = dataSource.collectionView(collectionView, numberOfItemsInSection: 0)
         
         super.prepare()
-        print("preapre...")
         
         var cursor: CGFloat = 0
         let itemLeft = insets

@@ -1,13 +1,13 @@
 //
-//  Entities.swift
-//  TribalCore
+//  Task.swift
+//  TribalMacOS
 //
-//  Created by Umur Gedik on 3.07.2021.
+//  Created by Umur Gedik on 8.07.2021.
 //
 
-import AppKit
+import Foundation
 
-public struct Task {
+public class Task: NSObject {
     public let coverImageURL: URL?
     public let isDone: Bool
     public let title: String
@@ -22,26 +22,5 @@ public struct Task {
         self.tags = tags
         self.assignee = assignee
         self.dueDate = dueDate
-    }
-}
-
-public struct TaskTag {
-    public let id: String
-    public let color: NSColor
-    
-    public init(id: String, color: NSColor) {
-        self.id = id
-        self.color = color
-    }
-}
-
-public struct Profile {
-    public let id = UUID()
-    public let name: String
-    public let imageURL: URL?
-    
-    public init(name: String, imageURL: URL?) {
-        self.name = name
-        self.imageURL = imageURL
     }
 }

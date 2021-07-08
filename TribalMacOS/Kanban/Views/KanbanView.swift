@@ -9,16 +9,16 @@ import AppKit
 
 class KanbanView: BaseView {
     // MARK: - View Hierarchy
-    let scrollView = NSScrollView().configure {
+    public let scrollView = NSScrollView().configure {
         $0.verticalScrollElasticity = .none
         $0.horizontalScrollElasticity = .allowed
         $0.backgroundColor = .windowBackgroundColor
     }
     
-    let boardView = KanbanBoardView()
-    let topDivider = NSBox.divider()
+    public let boardView = KanbanBoardView()
+    public let topDivider = NSBox.divider()
     
-    override func setupViewHierarchy() {
+    public override func setupViewHierarchy() {
         boardView.frame = bounds
         
         scrollView.documentView = boardView
@@ -32,10 +32,10 @@ class KanbanView: BaseView {
     }
     
     // MARK: - Layout
-    override var isFlipped: Bool { true }
+    public override var isFlipped: Bool { true }
     
-    override func layout() {
+    public override func layout() {
         super.layout()
-        boardView.frame.size.height = safeAreaRect.height
+        boardView.frame.size.height = bounds.height - 52
     }
 }

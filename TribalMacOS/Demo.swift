@@ -6,7 +6,6 @@
 //
 
 import AppKit
-import TribalCore
 
 public enum Demo {
     static let bundle: Bundle = {

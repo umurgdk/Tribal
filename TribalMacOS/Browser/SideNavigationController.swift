@@ -7,65 +7,51 @@
 
 import AppKit
 
-
-class SideNavigationController: NSViewController {
-    lazy var teamPopupTopDivider = NSBox.divider()
-    lazy var teamPopupBottomDivider = NSBox.divider()
-    
-    lazy var teamPopup = Popup().configure {
-        $0.header = "Teams"
-        $0.title = "Umur Gedik"
-        $0.image = Demo.image(named: "umur")
+class SideNavigationController: BaseViewController {
+    @objc public let browserController: BrowserController
+    private let observations = ObservationBag()
+    init(browserController: BrowserController) {
+        self.browserController = browserController
+        super.init()
     }
     
-    lazy var sourceList = NSOutlineView().configure {
-        $0.selectionHighlightStyle = .sourceList
-        
-        let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("column"))
-        $0.addTableColumn(column)
-        $0.headerView = nil
-        $0.backgroundColor = .clear
-        $0.dataSource = navigationDataSource
-        $0.delegate = navigationDataSource
-        $0.floatsGroupRows = false
-        $0.rowSizeStyle = .default
-    }
-    
-    lazy var navigationDataSource = SideNavigationDataSource()
-    
-    lazy var scrollView = NSScrollView().configure {
-        $0.drawsBackground = false
-    }
+    private lazy var navigationDataSource = SideNavigationDataSource(outlineView: navigationView.sourceList)
+    private lazy var navigationView = SideNavigationView()
     
     override func loadView() {
-        view = NSView()
-        
-        scrollView.documentView = sourceList
-        view.additionalSafeAreaInsets = .init(top: 48, left: 0, bottom: 0, right: 0)
-        sourceList.autosaveExpandedItems = true
-        sourceList.autosaveName = "BrowserSideBarSourceList"
-        
-        view.addSubview(scrollView)
-        view.addSubview(teamPopupTopDivider)
-        view.addSubview(teamPopupBottomDivider)
-        view.addSubview(teamPopup)
+        view = navigationView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sourceList.expandItem(navigationDataSource.projectsSection)
+        
+        navigationView.sourceList.dataSource = navigationDataSource
+        navigationView.sourceList.delegate = navigationDataSource
+        
+        navigationDataSource.setItems(browserController.workspace.projects, inSection: .projects)
+        navigationDataSource.expandSection(.projects)
+        
+        setupObservations()
     }
     
-    override func viewDidLayout() {
-        super.viewDidLayout()
+    // MARK: - Observations
+    private func setupObservations() {
+        observations.observeNew(\.browserController.workspace.projects, in: self) {
+            _self, newProjects in
+            _self.navigationDataSource.setItems(newProjects, inSection: .projects)
+        }
+
+        observations.observeNew(\.browserController.selectedProject, in: self, withInitialValue: true) {
+            _self, selectedProject in
+            _self.navigationDataSource.selectItem(selectedProject, inSection: .projects)
+        }
         
-        let bounds = view.bounds
-        let safeRect = view.safeAreaRect
-        
-        teamPopupTopDivider.frame = CGRect(x: 0, y: safeRect.maxY-1+view.additionalSafeAreaInsets.top, width: bounds.width, height: 1)
-        teamPopup.frame = CGRect(x: 0, y: teamPopupTopDivider.frame.minY + 1 - 40, width: bounds.width, height: 40)
-        teamPopupBottomDivider.frame = CGRect(x: 0, y: teamPopup.frame.minY, width: bounds.width, height: 1)
+        NotificationCenter.default.addObserver(self, selector: #selector(outlineViewSelectionDidChange), name: NSOutlineView.selectionDidChangeNotification, object: navigationView.sourceList)
+    }
     
-        scrollView.frame = view.bounds
+    @objc private func outlineViewSelectionDidChange(_ notification: Notification) {
+        if let project: Project = navigationDataSource.selectedItem() {
+            browserController.selectedProject = project
+        }
     }
 }

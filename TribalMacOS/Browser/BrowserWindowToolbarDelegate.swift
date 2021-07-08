@@ -93,7 +93,7 @@ class BrowserWindowToolbarDelegate: NSObject, NSToolbarDelegate {
             return NSToolbarItem(itemIdentifier: .filter).configure {
                 $0.label = "Filter"
                 $0.isNavigational = false
-                $0.action = Selector("showFilteringOptions")
+                $0.action = Selector(("showFilteringOptions"))
                 $0.view = NSButton(image: .filter, target: nil, action: nil).configure {
                     $0.bezelStyle = .texturedRounded
                 }

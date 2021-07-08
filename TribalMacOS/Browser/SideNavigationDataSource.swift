@@ -7,31 +7,81 @@
 
 import Cocoa
 
-class Section: NSObject {
+fileprivate class Section: NSObject {
+    typealias ID = SideNavigationDataSource.SectionID
+    
+    let id: ID
     let title: String
     var items: [AnyObject]
     
-    init(title: String, items: [AnyObject]) {
+    init(id: ID, title: String, items: [AnyObject]) {
+        self.id = id
         self.title = title
         self.items = items
     }
 }
 
-class Project: NSObject {
-    let title: String
-    init(title: String) {
-        self.title = title
+class SideNavigationDataSource: NSObject {
+    public enum SectionID { case projects }
+    private var sections = [
+        Section(id: .projects, title: "Projects", items: [])
+    ]
+    
+    private let outlineView: NSOutlineView
+    public init(outlineView: NSOutlineView) {
+        self.outlineView = outlineView
+        super.init()
+    }
+    
+    public func selectItem(_ item: Any?, inSection sectionID: SectionID) {
+        guard let section = sectionByID(sectionID) else { return }
+        
+        if !outlineView.isItemExpanded(section) {
+            outlineView.expandItem(section)
+        }
+        
+        let itemRow = outlineView.row(forItem: item)
+        if itemRow != NSNotFound {
+            outlineView.selectRowIndexes([itemRow], byExtendingSelection: false)
+        }
+    }
+    
+    public func selectedItem<T>() -> T? {
+        guard let firstIndex = outlineView.selectedRowIndexes.first,
+              let item = outlineView.item(atRow: firstIndex)
+        else {
+            return nil
+        }
+        
+        return item as? T
+    }
+    
+    public func expandSection(_ id: SectionID) {
+        guard let section = sectionByID(id) else { return }
+        outlineView.expandItem(section)
+    }
+    
+    public func setItems<T: AnyObject>(_ items: [T], inSection sectionID: SectionID, keepSelection: Bool = true) {
+        guard let section = sectionByID(sectionID) else { return }
+        section.items = items
+        
+        let selectedRowIndexes = outlineView.selectedRowIndexes
+        outlineView.reloadItem(section, reloadChildren: true)
+        if keepSelection {
+            outlineView.selectRowIndexes(selectedRowIndexes, byExtendingSelection: false)
+        }
+    }
+    
+    public func section(id: SectionID) -> Any? {
+        sectionByID(id)
+    }
+    
+    private func sectionByID(_ id: SectionID) -> Section? {
+        sections.first { $0.id == id }
     }
 }
 
-class SideNavigationDataSource: NSObject, NSOutlineViewDataSource, NSOutlineViewDelegate {
-    let projectsSection = Section(title: "Projects", items: [
-        Project(title: "Boom macOS"),
-        Project(title: "Boom iOS")
-    ])
-    
-    lazy var sections = [projectsSection]
-    
+extension SideNavigationDataSource: NSOutlineViewDataSource, NSOutlineViewDelegate {
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         if item == nil {
             return sections.count
@@ -98,10 +148,6 @@ class SideNavigationDataSource: NSObject, NSOutlineViewDataSource, NSOutlineView
         
         return true
     }
-    
-    // func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat {
-    //     28
-    // }
 }
 
 class NavigationSectionTextField: NSTextField, UserInterfaceIdentifiable {
