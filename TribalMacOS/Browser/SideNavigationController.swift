@@ -28,17 +28,15 @@ class SideNavigationController: BaseViewController {
         navigationView.sourceList.dataSource = navigationDataSource
         navigationView.sourceList.delegate = navigationDataSource
         
-        navigationDataSource.setItems(browserController.workspace.projects, inSection: .projects)
-        navigationDataSource.expandSection(.projects)
-        
         setupObservations()
     }
     
     // MARK: - Observations
     private func setupObservations() {
-        observations.observeNew(\.browserController.workspace.projects, in: self) {
-            _self, newProjects in
-            _self.navigationDataSource.setItems(newProjects, inSection: .projects)
+        observations.observeNew(\.browserController.selectedWorkspace, in: self, withInitialValue: true) {
+            _self, workspace in
+            guard let workspace = workspace else { return }
+            _self.navigationDataSource.setItems(workspace.projects, inSection: .projects)
         }
 
         observations.observeNew(\.browserController.selectedProject, in: self, withInitialValue: true) {

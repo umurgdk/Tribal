@@ -7,8 +7,8 @@
 
 import AppKit
 
-fileprivate class FlippedClipView: NSClipView {
-    override var isFlipped: Bool { true }
+public class FlippedClipView: NSClipView {
+    public override var isFlipped: Bool { true }
 }
 
 public class OrientedScrollView: NSScrollView {

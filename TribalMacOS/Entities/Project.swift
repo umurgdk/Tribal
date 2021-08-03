@@ -10,6 +10,7 @@ import Foundation
 public class Project: NSObject {
     public var title: String
     public var tasks: [Task]
+    public let workspaceID: String = ""
     
     public init(title: String, tasks: [Task] = []) {
         self.title = title

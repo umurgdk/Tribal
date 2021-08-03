@@ -13,6 +13,10 @@ public class Background: BaseView {
         didSet { needsDisplay = true }
     }
     
+    public var backgroundImage: NSImage? {
+        didSet { needsDisplay = true }
+    }
+    
     public var cornerRadius: CGFloat = 0 {
         didSet { needsDisplay = true }
     }
@@ -25,9 +29,13 @@ public class Background: BaseView {
         didSet { needsDisplay = true }
     }
     
+    public var shouldAllowVibrancy: Bool = true {
+        didSet { needsDisplay = true }
+    }
+    
     // MARK: - Setup
     public override var wantsUpdateLayer: Bool { true }
-    public override var allowsVibrancy: Bool { true }
+    public override var allowsVibrancy: Bool { shouldAllowVibrancy }
     
     public override func setupViewHierarchy() {
         wantsLayer = true
@@ -38,6 +46,11 @@ public class Background: BaseView {
     // MARK: - Appearance
     public override func updateLayer() {
         super.updateLayer()
+        if let backgroundImage = backgroundImage {
+            layer?.contents = backgroundImage
+            layer?.contentsGravity = .resizeAspectFill
+        }
+        
         layer?.backgroundColor = backgroundColor.cgColor
         layer?.cornerRadius = cornerRadius
         layer?.borderWidth = borderWidth

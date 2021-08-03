@@ -8,23 +8,32 @@
 import AppKit
 
 class KanbanViewController: BaseViewController {
-    @objc public let board: KanbanBoard
-    private let observations = ObservationBag()
+    @objc dynamic public var board: KanbanBoard!
+    private var observations = ObservationBag()
     init(board: KanbanBoard) {
-        self.board = board
         super.init()
+        setValue(board, forKey: "board")
     }
     
     private lazy var kanbanView = KanbanView()
+    private lazy var boardViewController = KanbanBoardViewController()
     public override func loadView() {
         view = kanbanView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addChild(boardViewController)
+        kanbanView.setContentView(boardViewController.view)
+        setupBoard()
+        view.needsLayout = true
+    }
+    
+    private func setupBoard() {
+        observations = ObservationBag()
         observations.observeNew(\.board.columns, in: self, withInitialValue: true) {
             _self, columns in
-            _self.kanbanView.boardView.setColumns(columns)
+            _self.boardViewController.setColumns(columns)
             _self.view.needsLayout = true
         }
     }

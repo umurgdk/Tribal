@@ -8,16 +8,15 @@
 import Foundation
 
 class BrowserController: NSObject {
-    public static let selectedProjectKeyPath = "selectedProject"
-    public static let selectedTaskPath = "selectedTask"
-    
-    @objc dynamic public let workspace: Workspace
+    @objc dynamic public var workspaces: [Workspace] = []
+    @objc dynamic public var selectedWorkspace: Workspace?
     @objc dynamic public var selectedProject: Project?
     @objc dynamic public var selectedTask: Task?
     
-    public init(workspace: Workspace) {
-        self.workspace = workspace
-        selectedProject = workspace.projects.last
+    public init(context: EntityContext) {
+        self.workspaces = context.workspaces
         super.init()
+        
+        selectedWorkspace = workspaces.first
     }
 }

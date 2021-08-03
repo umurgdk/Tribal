@@ -8,7 +8,7 @@
         <!--Window Controller-->
         <scene sceneID="AIr-mW-Q6L">
             <objects>
-                <windowController id="mhY-LW-8Zt" customClass="BrowserWindowController" customModule="TribalMacOS" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController id="mhY-LW-8Zt" customClass="ContextBrowserWindowController" customModule="TribalMacOS" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Tribal" separatorStyle="none" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" toolbarStyle="unified" id="6dv-Ju-BjB">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>

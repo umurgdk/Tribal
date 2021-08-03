@@ -7,9 +7,13 @@
 
 import Foundation
 
-class Workspace: NSObject {
+public class Workspace: NSObject {
     @objc dynamic public var projects: [Project]
-    public init(projects: [Project] = []) {
+    public let id: String
+    public let context: EntityContext
+    public init(context: EntityContext, id: String, projects: [Project] = []) {
+        self.id = id
+        self.context = context
         self.projects = projects
     }
 }

@@ -38,7 +38,7 @@ public class TaskCardView: Background {
         $0.font = .systemFont(ofSize: 14)
     }
     
-    // public override var wantsDefaultClipping: Bool { false }
+    public override var wantsDefaultClipping: Bool { false }
 
     public override func setupViewHierarchy() {
         cornerRadius = 4

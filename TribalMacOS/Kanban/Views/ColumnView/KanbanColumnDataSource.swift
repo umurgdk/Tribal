@@ -9,7 +9,10 @@ import AppKit
 import Nuke
 
 class KanbanColumnDataSource: NSObject, NSCollectionViewDataSource {
-    public var tasks: [Task] = []
+    public var tasks: [Task] = [] {
+        didSet { collectionView?.reloadSections([0]) }
+    }
+    
     public var collectionView: NSCollectionView?
     private var imageLoadingTasks: [URL: Any] = [:]
     

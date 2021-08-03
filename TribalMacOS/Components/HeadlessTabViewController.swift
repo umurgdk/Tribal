@@ -1,19 +1,24 @@
 //
-//  BrowserContentViewController.swift
+//  HeadlessTabViewController.swift
 //  TribalMacOS
 //
-//  Created by Umur Gedik on 8.07.2021.
+//  Created by Umur Gedik on 14.07.2021.
 //
 
 import AppKit
 
-class BrowserInitialContentViewController: BaseViewController {
+fileprivate class HeadlessTabViewInitialViewController: BaseViewController {
     override func loadView() {
         view = NSView()
     }
 }
 
-class BrowserContentViewController: NSTabViewController {
+class HeadlessTabViewController: NSTabViewController {
+    public var currentViewController: NSViewController? {
+        guard tabViewItems.indices.contains(selectedTabViewItemIndex) else { return nil }
+        return tabViewItems[selectedTabViewItemIndex].viewController
+    }
+    
     public init() {
         super.init(nibName: nil, bundle: nil)
         setupUI()
@@ -29,6 +34,8 @@ class BrowserContentViewController: NSTabViewController {
         
         tabStyle = .unspecified
         transitionOptions = .crossfade
+        
+        presentViewController(HeadlessTabViewInitialViewController())
     }
     
     public func presentViewController(_ viewController: NSViewController) {

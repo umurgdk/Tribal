@@ -1,5 +1,5 @@
 //
-//  BrowserWindowToolbarDelegate.swift
+//  ContextBrowserWindowToolbarDelegate.swift
 //  TribalMacOS
 //
 //  Created by Umur Gedik on 4.07.2021.
@@ -22,7 +22,7 @@ extension NSImage {
     static var list: NSImage { NSImage(named: NSImage.listViewTemplateName)! }
 }
 
-class BrowserWindowToolbarDelegate: NSObject, NSToolbarDelegate {
+class ContextBrowserWindowToolbarDelegate: NSObject, NSToolbarDelegate {
     func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
         [
             .flexibleSpace,

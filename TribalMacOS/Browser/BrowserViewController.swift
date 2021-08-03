@@ -27,7 +27,7 @@ class BrowserViewController: BaseViewController {
     }
     
     private let observations = ObservationBag()
-    private lazy var contentViewController = BrowserContentViewController()
+    private lazy var contentViewController = HeadlessTabViewController()
     private lazy var sideNavigationController = SideNavigationController(browserController: browserController)
     
     public override func loadView() {
@@ -56,7 +56,11 @@ class BrowserViewController: BaseViewController {
         guard let project = project else { return }
         
         let board = KanbanBoard(project: project)
-        let kanbanViewController = KanbanViewController(board: board)
-        contentViewController.presentViewController(kanbanViewController)
+        if let kanbanViewController = contentViewController.currentViewController as? KanbanViewController {
+            kanbanViewController.board = board
+        } else {
+            let kanbanViewController = KanbanViewController(board: board)
+            contentViewController.presentViewController(kanbanViewController)
+        }
     }
 }

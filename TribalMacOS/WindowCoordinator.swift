@@ -11,6 +11,10 @@ class WindowCoordinator {
     public static let shared = WindowCoordinator()
     public private(set) var windowControllers: [NSWindowController] = []
     
+    public var contextBrowserWindowControllers: [ContextBrowserWindowController] {
+        windowControllers.compactMap { $0 as? ContextBrowserWindowController }
+    }
+    
     public func add(_ windowController: NSWindowController) {
         windowControllers.append(windowController)
         

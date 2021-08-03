@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90B921A269E5BEB00F30867 /* AccountsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B9219269E5BEB00F30867 /* AccountsController.swift */; };
+		A90B921C269E5C1000F30867 /* AuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B921B269E5C1000F30867 /* AuthenticationProvider.swift */; };
+		A90B921E269E5D4C00F30867 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B921D269E5D4C00F30867 /* Account.swift */; };
+		A90B9220269E5D9700F30867 /* Asana.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B921F269E5D9700F30867 /* Asana.swift */; };
+		A90B9225269E620400F30867 /* ContextBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B9224269E620400F30867 /* ContextBrowserViewController.swift */; };
+		A90B9227269E624900F30867 /* ContextPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B9226269E624900F30867 /* ContextPickerViewController.swift */; };
+		A90B9229269E626000F30867 /* ContextPickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B9228269E626000F30867 /* ContextPickerItemView.swift */; };
+		A90B922B269E674400F30867 /* HeadlessTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B922A269E674400F30867 /* HeadlessTabViewController.swift */; };
+		A90B922D269E68A900F30867 /* ContextBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B922C269E68A900F30867 /* ContextBrowserView.swift */; };
+		A90B9230269E710700F30867 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B922F269E710700F30867 /* OnboardingViewController.swift */; };
+		A90B9232269E723000F30867 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B9231269E723000F30867 /* OnboardingView.swift */; };
+		A90B9234269E74C500F30867 /* OnboardingConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B9233269E74C500F30867 /* OnboardingConnectButton.swift */; };
+		A912E34D26A37F92003CE4D6 /* AsanaEntityContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E34C26A37F92003CE4D6 /* AsanaEntityContext.swift */; };
+		A912E34F26A37FCB003CE4D6 /* AsanaAuthenticatedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E34E26A37FCB003CE4D6 /* AsanaAuthenticatedAPI.swift */; };
+		A912E35126A380F6003CE4D6 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E35026A380F6003CE4D6 /* Backend.swift */; };
+		A912E35326A3845E003CE4D6 /* EntityContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E35226A3845E003CE4D6 /* EntityContext.swift */; };
+		A912E35626A3996F003CE4D6 /* AsanaContextPrepareOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E35526A3996F003CE4D6 /* AsanaContextPrepareOperation.swift */; };
+		A912E35826A3A3F6003CE4D6 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E35726A3A3F6003CE4D6 /* AsynchronousOperation.swift */; };
+		A912E35B26A3A501003CE4D6 /* AsanaAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E35A26A3A501003CE4D6 /* AsanaAPIRequest.swift */; };
+		A912E35E26A3A537003CE4D6 /* AsanaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E35D26A3A537003CE4D6 /* AsanaUser.swift */; };
+		A912E36026A3A9C3003CE4D6 /* AsynchronousFailableOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E35F26A3A9C3003CE4D6 /* AsynchronousFailableOperation.swift */; };
+		A912E36226A3B394003CE4D6 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E36126A3B394003CE4D6 /* LoadingViewController.swift */; };
 		A928DFCD2696887100E583C6 /* TaskCardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928DFCC2696887100E583C6 /* TaskCardSelectionView.swift */; };
 		A928DFCF26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928DFCE26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift */; };
 		A928DFD126968D2500E583C6 /* TaskCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928DFD026968D2500E583C6 /* TaskCardView.swift */; };
@@ -30,7 +52,6 @@
 		A93916E52690DB8E00FD0652 /* NSView+ascender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916E42690DB8E00FD0652 /* NSView+ascender.swift */; };
 		A93916E72690E60D00FD0652 /* BrowserWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916E62690E60D00FD0652 /* BrowserWindowController.swift */; };
 		A93916E92690EB3700FD0652 /* SideNavigationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916E82690EB3700FD0652 /* SideNavigationDataSource.swift */; };
-		A93916EB2691236200FD0652 /* BrowserWindowToolbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916EA2691236200FD0652 /* BrowserWindowToolbarDelegate.swift */; };
 		A93916ED26912D5B00FD0652 /* KanbanBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916EC26912D5B00FD0652 /* KanbanBoardView.swift */; };
 		A93916EF26912D9200FD0652 /* KanbanColumnLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916EE26912D9200FD0652 /* KanbanColumnLayout.swift */; };
 		A93916F126912DBF00FD0652 /* KanbanColumnHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916F026912DBF00FD0652 /* KanbanColumnHeader.swift */; };
@@ -51,9 +72,8 @@
 		A975457C269691C5007CC859 /* KanbanColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975457B269691C5007CC859 /* KanbanColumn.swift */; };
 		A9C114AF2696C90100510A9C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114AE2696C90100510A9C /* BaseViewController.swift */; };
 		A9C114B12696CA1B00510A9C /* KanbanColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114B02696CA1B00510A9C /* KanbanColumnViewController.swift */; };
-		A9C114B72696D75900510A9C /* BrowserContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114B62696D75900510A9C /* BrowserContentViewController.swift */; };
 		A9C114BB2696E54C00510A9C /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114BA2696E54C00510A9C /* Workspace.swift */; };
-		A9C114BD2696E62C00510A9C /* Browser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C114BC2696E62C00510A9C /* Browser.storyboard */; };
+		A9C114BD2696E62C00510A9C /* ContextBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C114BC2696E62C00510A9C /* ContextBrowser.storyboard */; };
 		A9C114BF2696E81C00510A9C /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114BE2696E81C00510A9C /* WindowCoordinator.swift */; };
 		A9C114C22696F73800510A9C /* BrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C12696F73800510A9C /* BrowserController.swift */; };
 		A9C114C42696F78D00510A9C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C32696F78D00510A9C /* Task.swift */; };
@@ -61,6 +81,18 @@
 		A9C114C82696F7AF00510A9C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C72696F7AF00510A9C /* Profile.swift */; };
 		A9C114CA2696F90D00510A9C /* SideNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114C92696F90D00510A9C /* SideNavigationView.swift */; };
 		A9C114CE2697205D00510A9C /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114CD2697205D00510A9C /* Observation.swift */; };
+		A9C114D42697A64500510A9C /* KanbanBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114D32697A64500510A9C /* KanbanBoardViewController.swift */; };
+		A9C114E02698623600510A9C /* AuthenticationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114DF2698623600510A9C /* AuthenticationWindowController.swift */; };
+		A9C114E22698626300510A9C /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114E12698626300510A9C /* AuthenticationViewController.swift */; };
+		A9C114E42698A49E00510A9C /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114E32698A49E00510A9C /* AuthenticationController.swift */; };
+		A9C114E72698A92300510A9C /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A9C114E62698A92300510A9C /* KeychainSwift */; };
+		A9C114E92698ADCC00510A9C /* AsanaAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114E82698ADCC00510A9C /* AsanaAuthenticator.swift */; };
+		A9C114EB2698ADE100510A9C /* AsanaAPICredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C114EA2698ADE100510A9C /* AsanaAPICredentials.swift */; };
+		A9C3F28E269FA4A700A1D9B6 /* ContextPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3F28D269FA4A700A1D9B6 /* ContextPickerView.swift */; };
+		A9C3F290269FAE8700A1D9B6 /* ContextBrowserWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3F28F269FAE8700A1D9B6 /* ContextBrowserWindowController.swift */; };
+		A9C3F292269FAF4500A1D9B6 /* ContextBrowserWindowToolbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93916EA2691236200FD0652 /* ContextBrowserWindowToolbarDelegate.swift */; };
+		A9C3F294269FB17E00A1D9B6 /* BaseWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3F293269FB17E00A1D9B6 /* BaseWindowController.swift */; };
+		A9C3F296269FB70500A1D9B6 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3F295269FB70500A1D9B6 /* Team.swift */; };
 		A9F09BC72692AD0E00C8FF6B /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A9F09BC62692AD0E00C8FF6B /* PinLayout */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +120,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A90B9219269E5BEB00F30867 /* AccountsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsController.swift; sourceTree = "<group>"; };
+		A90B921B269E5C1000F30867 /* AuthenticationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProvider.swift; sourceTree = "<group>"; };
+		A90B921D269E5D4C00F30867 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		A90B921F269E5D9700F30867 /* Asana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asana.swift; sourceTree = "<group>"; };
+		A90B9224269E620400F30867 /* ContextBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextBrowserViewController.swift; sourceTree = "<group>"; };
+		A90B9226269E624900F30867 /* ContextPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextPickerViewController.swift; sourceTree = "<group>"; };
+		A90B9228269E626000F30867 /* ContextPickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextPickerItemView.swift; sourceTree = "<group>"; };
+		A90B922A269E674400F30867 /* HeadlessTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlessTabViewController.swift; sourceTree = "<group>"; };
+		A90B922C269E68A900F30867 /* ContextBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextBrowserView.swift; sourceTree = "<group>"; };
+		A90B922F269E710700F30867 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A90B9231269E723000F30867 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A90B9233269E74C500F30867 /* OnboardingConnectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConnectButton.swift; sourceTree = "<group>"; };
+		A912E34C26A37F92003CE4D6 /* AsanaEntityContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaEntityContext.swift; sourceTree = "<group>"; };
+		A912E34E26A37FCB003CE4D6 /* AsanaAuthenticatedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaAuthenticatedAPI.swift; sourceTree = "<group>"; };
+		A912E35026A380F6003CE4D6 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		A912E35226A3845E003CE4D6 /* EntityContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityContext.swift; sourceTree = "<group>"; };
+		A912E35526A3996F003CE4D6 /* AsanaContextPrepareOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaContextPrepareOperation.swift; sourceTree = "<group>"; };
+		A912E35726A3A3F6003CE4D6 /* AsynchronousOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
+		A912E35A26A3A501003CE4D6 /* AsanaAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaAPIRequest.swift; sourceTree = "<group>"; };
+		A912E35D26A3A537003CE4D6 /* AsanaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaUser.swift; sourceTree = "<group>"; };
+		A912E35F26A3A9C3003CE4D6 /* AsynchronousFailableOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousFailableOperation.swift; sourceTree = "<group>"; };
+		A912E36126A3B394003CE4D6 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		A928DFCC2696887100E583C6 /* TaskCardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardSelectionView.swift; sourceTree = "<group>"; };
 		A928DFCE26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumnCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		A928DFD026968D2500E583C6 /* TaskCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCardView.swift; sourceTree = "<group>"; };
@@ -113,7 +167,7 @@
 		A93916E42690DB8E00FD0652 /* NSView+ascender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+ascender.swift"; sourceTree = "<group>"; };
 		A93916E62690E60D00FD0652 /* BrowserWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindowController.swift; sourceTree = "<group>"; };
 		A93916E82690EB3700FD0652 /* SideNavigationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideNavigationDataSource.swift; sourceTree = "<group>"; };
-		A93916EA2691236200FD0652 /* BrowserWindowToolbarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserWindowToolbarDelegate.swift; sourceTree = "<group>"; };
+		A93916EA2691236200FD0652 /* ContextBrowserWindowToolbarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextBrowserWindowToolbarDelegate.swift; sourceTree = "<group>"; };
 		A93916EC26912D5B00FD0652 /* KanbanBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardView.swift; sourceTree = "<group>"; };
 		A93916EE26912D9200FD0652 /* KanbanColumnLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumnLayout.swift; sourceTree = "<group>"; };
 		A93916F026912DBF00FD0652 /* KanbanColumnHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumnHeader.swift; sourceTree = "<group>"; };
@@ -134,9 +188,8 @@
 		A975457B269691C5007CC859 /* KanbanColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumn.swift; sourceTree = "<group>"; };
 		A9C114AE2696C90100510A9C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A9C114B02696CA1B00510A9C /* KanbanColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanColumnViewController.swift; sourceTree = "<group>"; };
-		A9C114B62696D75900510A9C /* BrowserContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserContentViewController.swift; sourceTree = "<group>"; };
 		A9C114BA2696E54C00510A9C /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
-		A9C114BC2696E62C00510A9C /* Browser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Browser.storyboard; sourceTree = "<group>"; };
+		A9C114BC2696E62C00510A9C /* ContextBrowser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContextBrowser.storyboard; sourceTree = "<group>"; };
 		A9C114BE2696E81C00510A9C /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
 		A9C114C12696F73800510A9C /* BrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserController.swift; sourceTree = "<group>"; };
 		A9C114C32696F78D00510A9C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -144,6 +197,16 @@
 		A9C114C72696F7AF00510A9C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A9C114C92696F90D00510A9C /* SideNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideNavigationView.swift; sourceTree = "<group>"; };
 		A9C114CD2697205D00510A9C /* Observation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
+		A9C114D32697A64500510A9C /* KanbanBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardViewController.swift; sourceTree = "<group>"; };
+		A9C114DF2698623600510A9C /* AuthenticationWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWindowController.swift; sourceTree = "<group>"; };
+		A9C114E12698626300510A9C /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		A9C114E32698A49E00510A9C /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		A9C114E82698ADCC00510A9C /* AsanaAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaAuthenticator.swift; sourceTree = "<group>"; };
+		A9C114EA2698ADE100510A9C /* AsanaAPICredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanaAPICredentials.swift; sourceTree = "<group>"; };
+		A9C3F28D269FA4A700A1D9B6 /* ContextPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextPickerView.swift; sourceTree = "<group>"; };
+		A9C3F28F269FAE8700A1D9B6 /* ContextBrowserWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextBrowserWindowController.swift; sourceTree = "<group>"; };
+		A9C3F293269FB17E00A1D9B6 /* BaseWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWindowController.swift; sourceTree = "<group>"; };
+		A9C3F295269FB70500A1D9B6 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93916C1268FF25800FD0652 /* SnapKit in Frameworks */,
+				A9C114E72698A92300510A9C /* KeychainSwift in Frameworks */,
 				A9F09BC72692AD0E00C8FF6B /* PinLayout in Frameworks */,
 				A93916C6268FF5A100FD0652 /* Nuke in Frameworks */,
 			);
@@ -167,6 +231,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A90B9218269E5BE000F30867 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				A90B9219269E5BEB00F30867 /* AccountsController.swift */,
+				A90B921B269E5C1000F30867 /* AuthenticationProvider.swift */,
+				A90B921D269E5D4C00F30867 /* Account.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		A90B9223269E61E900F30867 /* ContextBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				A9C3F291269FAEFA00A1D9B6 /* ContextPicker */,
+				A9C114BC2696E62C00510A9C /* ContextBrowser.storyboard */,
+				A90B922C269E68A900F30867 /* ContextBrowserView.swift */,
+				A90B9224269E620400F30867 /* ContextBrowserViewController.swift */,
+				A9C3F28F269FAE8700A1D9B6 /* ContextBrowserWindowController.swift */,
+				A93916EA2691236200FD0652 /* ContextBrowserWindowToolbarDelegate.swift */,
+			);
+			path = ContextBrowser;
+			sourceTree = "<group>";
+		};
+		A90B922E269E70F200F30867 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A90B922F269E710700F30867 /* OnboardingViewController.swift */,
+				A90B9231269E723000F30867 /* OnboardingView.swift */,
+				A90B9233269E74C500F30867 /* OnboardingConnectButton.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A912E35426A3995F003CE4D6 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				A912E35526A3996F003CE4D6 /* AsanaContextPrepareOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		A912E35926A3A4F6003CE4D6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A912E35A26A3A501003CE4D6 /* AsanaAPIRequest.swift */,
+				A912E34E26A37FCB003CE4D6 /* AsanaAuthenticatedAPI.swift */,
+				A9C114E82698ADCC00510A9C /* AsanaAuthenticator.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A912E35C26A3A530003CE4D6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A912E35D26A3A537003CE4D6 /* AsanaUser.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		A9391654268FC1B300FD0652 = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +330,11 @@
 		A9391697268FEFD700FD0652 /* TribalMacOS */ = {
 			isa = PBXGroup;
 			children = (
+				A90B922E269E70F200F30867 /* Onboarding */,
+				A90B9223269E61E900F30867 /* ContextBrowser */,
+				A9C114DE2698622700510A9C /* AppStorage */,
 				A9C114C02696E9DE00510A9C /* Resources */,
+				A9C114D52698577600510A9C /* Backends */,
 				A9754578269690E8007CC859 /* Entities */,
 				A93916A6268FF00400FD0652 /* Extensions */,
 				A93916CE268FF96200FD0652 /* Components */,
@@ -248,6 +375,7 @@
 			children = (
 				A93916CF268FF96D00FD0652 /* Basic */,
 				A9C114CD2697205D00510A9C /* Observation.swift */,
+				A90B922A269E674400F30867 /* HeadlessTabViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -262,6 +390,8 @@
 				A93916FB269145D900FD0652 /* Divider.swift */,
 				A93916FD2691536600FD0652 /* Background.swift */,
 				A9C114AE2696C90100510A9C /* BaseViewController.swift */,
+				A9C3F293269FB17E00A1D9B6 /* BaseWindowController.swift */,
+				A912E36126A3B394003CE4D6 /* LoadingViewController.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -269,13 +399,10 @@
 		A93916D22690A30500FD0652 /* Browser */ = {
 			isa = PBXGroup;
 			children = (
-				A9C114BC2696E62C00510A9C /* Browser.storyboard */,
-				A9C114B62696D75900510A9C /* BrowserContentViewController.swift */,
 				A9C114C12696F73800510A9C /* BrowserController.swift */,
 				A93916FF2691E73600FD0652 /* BrowserMenu.swift */,
 				A93916D32690A31500FD0652 /* BrowserViewController.swift */,
 				A93916E62690E60D00FD0652 /* BrowserWindowController.swift */,
-				A93916EA2691236200FD0652 /* BrowserWindowToolbarDelegate.swift */,
 				A93916D52690A35A00FD0652 /* SideNavigationController.swift */,
 				A93916E82690EB3700FD0652 /* SideNavigationDataSource.swift */,
 				A9C114C92696F90D00510A9C /* SideNavigationView.swift */,
@@ -293,6 +420,7 @@
 		A93916F626912FDA00FD0652 /* ColumnView */ = {
 			isa = PBXGroup;
 			children = (
+				A939170F2692470A00FD0652 /* KanbanColumnDataSource.swift */,
 				A93917082692254B00FD0652 /* KanbanColumnCollectionView.swift */,
 				A928DFCE26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift */,
 				A93916F026912DBF00FD0652 /* KanbanColumnHeader.swift */,
@@ -306,9 +434,9 @@
 		A93917012691FFBE00FD0652 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9C114D22697A62F00510A9C /* BoardView */,
 				A93917022692001900FD0652 /* Card */,
 				A93916F626912FDA00FD0652 /* ColumnView */,
-				A93916EC26912D5B00FD0652 /* KanbanBoardView.swift */,
 				A93916F426912E0B00FD0652 /* KanbanView.swift */,
 				A93916CC268FF8D300FD0652 /* KanbanViewController.swift */,
 			);
@@ -329,7 +457,6 @@
 		A939170E269246FA00FD0652 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				A939170F2692470A00FD0652 /* KanbanColumnDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -337,11 +464,13 @@
 		A9754578269690E8007CC859 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				A912E35226A3845E003CE4D6 /* EntityContext.swift */,
 				A97545792696910A007CC859 /* Project.swift */,
 				A9C114BA2696E54C00510A9C /* Workspace.swift */,
 				A9C114C32696F78D00510A9C /* Task.swift */,
 				A9C114C52696F7A200510A9C /* TaskTag.swift */,
 				A9C114C72696F7AF00510A9C /* Profile.swift */,
+				A9C3F295269FB70500A1D9B6 /* Team.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -355,6 +484,60 @@
 				A93916A2268FEFD900FD0652 /* TribalMacOS.entitlements */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A9C114D22697A62F00510A9C /* BoardView */ = {
+			isa = PBXGroup;
+			children = (
+				A93916EC26912D5B00FD0652 /* KanbanBoardView.swift */,
+				A9C114D32697A64500510A9C /* KanbanBoardViewController.swift */,
+			);
+			path = BoardView;
+			sourceTree = "<group>";
+		};
+		A9C114D52698577600510A9C /* Backends */ = {
+			isa = PBXGroup;
+			children = (
+				A90B9218269E5BE000F30867 /* Accounts */,
+				A9C114D62698578B00510A9C /* Asana */,
+				A912E35026A380F6003CE4D6 /* Backend.swift */,
+				A912E35726A3A3F6003CE4D6 /* AsynchronousOperation.swift */,
+				A912E35F26A3A9C3003CE4D6 /* AsynchronousFailableOperation.swift */,
+			);
+			path = Backends;
+			sourceTree = "<group>";
+		};
+		A9C114D62698578B00510A9C /* Asana */ = {
+			isa = PBXGroup;
+			children = (
+				A912E35C26A3A530003CE4D6 /* Entities */,
+				A912E35926A3A4F6003CE4D6 /* API */,
+				A912E35426A3995F003CE4D6 /* Operations */,
+				A9C114EA2698ADE100510A9C /* AsanaAPICredentials.swift */,
+				A90B921F269E5D9700F30867 /* Asana.swift */,
+				A912E34C26A37F92003CE4D6 /* AsanaEntityContext.swift */,
+			);
+			path = Asana;
+			sourceTree = "<group>";
+		};
+		A9C114DE2698622700510A9C /* AppStorage */ = {
+			isa = PBXGroup;
+			children = (
+				A9C114DF2698623600510A9C /* AuthenticationWindowController.swift */,
+				A9C114E12698626300510A9C /* AuthenticationViewController.swift */,
+				A9C114E32698A49E00510A9C /* AuthenticationController.swift */,
+			);
+			path = AppStorage;
+			sourceTree = "<group>";
+		};
+		A9C3F291269FAEFA00A1D9B6 /* ContextPicker */ = {
+			isa = PBXGroup;
+			children = (
+				A90B9228269E626000F30867 /* ContextPickerItemView.swift */,
+				A9C3F28D269FA4A700A1D9B6 /* ContextPickerView.swift */,
+				A90B9226269E624900F30867 /* ContextPickerViewController.swift */,
+			);
+			path = ContextPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +579,7 @@
 				A93916C0268FF25800FD0652 /* SnapKit */,
 				A93916C5268FF5A100FD0652 /* Nuke */,
 				A9F09BC62692AD0E00C8FF6B /* PinLayout */,
+				A9C114E62698A92300510A9C /* KeychainSwift */,
 			);
 			productName = TribalMacOS;
 			productReference = A9391696268FEFD700FD0652 /* TribalMacOS.app */;
@@ -428,10 +612,10 @@
 			);
 			mainGroup = A9391654268FC1B300FD0652;
 			packageReferences = (
-				A939168D268FEE2100FD0652 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				A93916BF268FF25800FD0652 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				A93916C4268FF5A100FD0652 /* XCRemoteSwiftPackageReference "Nuke" */,
 				A9F09BC52692AD0E00C8FF6B /* XCRemoteSwiftPackageReference "PinLayout" */,
+				A9C114E52698A92300510A9C /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = A939165E268FC1B300FD0652 /* Products */;
 			projectDirPath = "";
@@ -458,7 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93916DB2690B21B00FD0652 /* TribalDemoContent.bundle in Resources */,
-				A9C114BD2696E62C00510A9C /* Browser.storyboard in Resources */,
+				A9C114BD2696E62C00510A9C /* ContextBrowser.storyboard in Resources */,
 				A939169D268FEFD900FD0652 /* Assets.xcassets in Resources */,
 				A93916A0268FEFD900FD0652 /* Main.storyboard in Resources */,
 			);
@@ -478,51 +662,82 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90B9220269E5D9700F30867 /* Asana.swift in Sources */,
+				A90B922D269E68A900F30867 /* ContextBrowserView.swift in Sources */,
+				A9C3F290269FAE8700A1D9B6 /* ContextBrowserWindowController.swift in Sources */,
 				A93916E52690DB8E00FD0652 /* NSView+ascender.swift in Sources */,
 				A93916D1268FF98300FD0652 /* ImageView.swift in Sources */,
 				A9C114BF2696E81C00510A9C /* WindowCoordinator.swift in Sources */,
+				A9C114E92698ADCC00510A9C /* AsanaAuthenticator.swift in Sources */,
 				A93916D62690A35A00FD0652 /* SideNavigationController.swift in Sources */,
 				A975457C269691C5007CC859 /* KanbanColumn.swift in Sources */,
 				A93917102692470A00FD0652 /* KanbanColumnDataSource.swift in Sources */,
 				A928DFD126968D2500E583C6 /* TaskCardView.swift in Sources */,
+				A912E36226A3B394003CE4D6 /* LoadingViewController.swift in Sources */,
 				A93916EF26912D9200FD0652 /* KanbanColumnLayout.swift in Sources */,
-				A9C114B72696D75900510A9C /* BrowserContentViewController.swift in Sources */,
 				A93916D82690A3A900FD0652 /* Popup.swift in Sources */,
 				A93916D42690A31500FD0652 /* BrowserViewController.swift in Sources */,
 				A93916E92690EB3700FD0652 /* SideNavigationDataSource.swift in Sources */,
 				A93916DD2690B22900FD0652 /* Demo.swift in Sources */,
+				A912E35326A3845E003CE4D6 /* EntityContext.swift in Sources */,
+				A9C114E42698A49E00510A9C /* AuthenticationController.swift in Sources */,
+				A90B921E269E5D4C00F30867 /* Account.swift in Sources */,
+				A90B9234269E74C500F30867 /* OnboardingConnectButton.swift in Sources */,
+				A90B922B269E674400F30867 /* HeadlessTabViewController.swift in Sources */,
 				A93916CB268FF8A700FD0652 /* TaskCardItem.swift in Sources */,
 				A9C114B12696CA1B00510A9C /* KanbanColumnViewController.swift in Sources */,
+				A912E35B26A3A501003CE4D6 /* AsanaAPIRequest.swift in Sources */,
 				A93916FA2691375400FD0652 /* BaseView.swift in Sources */,
 				A9C114C82696F7AF00510A9C /* Profile.swift in Sources */,
+				A9C114D42697A64500510A9C /* KanbanBoardViewController.swift in Sources */,
 				A9C114C22696F73800510A9C /* BrowserController.swift in Sources */,
 				A93917092692254B00FD0652 /* KanbanColumnCollectionView.swift in Sources */,
 				A928DFCD2696887100E583C6 /* TaskCardSelectionView.swift in Sources */,
 				A93916CD268FF8D300FD0652 /* KanbanViewController.swift in Sources */,
 				A93916FE2691536600FD0652 /* Background.swift in Sources */,
 				A939170B26922E8D00FD0652 /* CoreGraphics+Geometry.swift in Sources */,
-				A93916EB2691236200FD0652 /* BrowserWindowToolbarDelegate.swift in Sources */,
 				A93916A8268FF01100FD0652 /* Initialization.swift in Sources */,
+				A9C3F294269FB17E00A1D9B6 /* BaseWindowController.swift in Sources */,
 				A93916C8268FF69900FD0652 /* UserInterfaceIdentifiable.swift in Sources */,
 				A9C114AF2696C90100510A9C /* BaseViewController.swift in Sources */,
+				A90B9229269E626000F30867 /* ContextPickerItemView.swift in Sources */,
 				A93917042692003700FD0652 /* TaskDueLabel.swift in Sources */,
 				A9C114BB2696E54C00510A9C /* Workspace.swift in Sources */,
+				A912E35826A3A3F6003CE4D6 /* AsynchronousOperation.swift in Sources */,
+				A90B921A269E5BEB00F30867 /* AccountsController.swift in Sources */,
 				A9391699268FEFD700FD0652 /* AppDelegate.swift in Sources */,
 				A9C114CE2697205D00510A9C /* Observation.swift in Sources */,
 				A93916F82691300A00FD0652 /* KanbanColumnView.swift in Sources */,
+				A90B9227269E624900F30867 /* ContextPickerViewController.swift in Sources */,
+				A90B9225269E620400F30867 /* ContextBrowserViewController.swift in Sources */,
 				A9391706269200C300FD0652 /* NSImage+symbol.swift in Sources */,
 				A93916F126912DBF00FD0652 /* KanbanColumnHeader.swift in Sources */,
 				A93917002691E73600FD0652 /* BrowserMenu.swift in Sources */,
 				A93916F326912DF100FD0652 /* OrientedScrollView.swift in Sources */,
 				A93916F526912E0B00FD0652 /* KanbanView.swift in Sources */,
+				A912E34D26A37F92003CE4D6 /* AsanaEntityContext.swift in Sources */,
 				A93916ED26912D5B00FD0652 /* KanbanBoardView.swift in Sources */,
+				A9C3F28E269FA4A700A1D9B6 /* ContextPickerView.swift in Sources */,
+				A912E35126A380F6003CE4D6 /* Backend.swift in Sources */,
+				A912E34F26A37FCB003CE4D6 /* AsanaAuthenticatedAPI.swift in Sources */,
+				A9C114E02698623600510A9C /* AuthenticationWindowController.swift in Sources */,
 				A93916E72690E60D00FD0652 /* BrowserWindowController.swift in Sources */,
 				A97545772696908E007CC859 /* KanbanBoard.swift in Sources */,
+				A9C114EB2698ADE100510A9C /* AsanaAPICredentials.swift in Sources */,
+				A9C3F296269FB70500A1D9B6 /* Team.swift in Sources */,
 				A928DFCF26968B9D00E583C6 /* KanbanColumnCollectionViewDelegate.swift in Sources */,
 				A9C114C42696F78D00510A9C /* Task.swift in Sources */,
+				A912E35E26A3A537003CE4D6 /* AsanaUser.swift in Sources */,
+				A9C3F292269FAF4500A1D9B6 /* ContextBrowserWindowToolbarDelegate.swift in Sources */,
+				A912E36026A3A9C3003CE4D6 /* AsynchronousFailableOperation.swift in Sources */,
+				A90B921C269E5C1000F30867 /* AuthenticationProvider.swift in Sources */,
 				A93916FC269145D900FD0652 /* Divider.swift in Sources */,
+				A90B9230269E710700F30867 /* OnboardingViewController.swift in Sources */,
+				A912E35626A3996F003CE4D6 /* AsanaContextPrepareOperation.swift in Sources */,
 				A9C114CA2696F90D00510A9C /* SideNavigationView.swift in Sources */,
 				A975457A2696910A007CC859 /* Project.swift in Sources */,
+				A9C114E22698626300510A9C /* AuthenticationViewController.swift in Sources */,
+				A90B9232269E723000F30867 /* OnboardingView.swift in Sources */,
 				A9C114C62696F7A200510A9C /* TaskTag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -769,14 +984,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A939168D268FEE2100FD0652 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
-			};
-		};
 		A93916BF268FF25800FD0652 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -791,6 +998,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.3.0;
+			};
+		};
+		A9C114E52698A92300510A9C /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
 			};
 		};
 		A9F09BC52692AD0E00C8FF6B /* XCRemoteSwiftPackageReference "PinLayout" */ = {
@@ -813,6 +1028,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A93916C4268FF5A100FD0652 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		A9C114E62698A92300510A9C /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9C114E52698A92300510A9C /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 		A9F09BC62692AD0E00C8FF6B /* PinLayout */ = {
 			isa = XCSwiftPackageProductDependency;

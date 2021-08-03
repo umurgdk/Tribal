@@ -13,7 +13,7 @@ class KanbanBoard: NSObject {
     
     public init(project: Project) {
         self.project = project
-        self.columns = (1...5).map { numColumn in
+        self.columns = (1...8).map { numColumn in
             KanbanColumn(title: "Column \(numColumn)", tasks: project.tasks.shuffled())
         }
         

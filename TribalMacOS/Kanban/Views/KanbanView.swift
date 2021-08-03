@@ -8,24 +8,28 @@
 import AppKit
 
 class KanbanView: BaseView {
-    // MARK: - View Hierarchy
     public let scrollView = NSScrollView().configure {
         $0.verticalScrollElasticity = .none
         $0.horizontalScrollElasticity = .allowed
         $0.backgroundColor = .windowBackgroundColor
+        $0.wantsLayer = true
     }
     
-    public let boardView = KanbanBoardView()
-    public let topDivider = NSBox.divider()
+    
+    public func setContentView(_ contentView: NSView) {
+        contentView.frame = bounds
+        scrollView.documentView = contentView
+        needsLayout = true
+    }
     
     public override func setupViewHierarchy() {
-        boardView.frame = bounds
+        wantsLayer = true
         
-        scrollView.documentView = boardView
         scrollView.frame = bounds
         scrollView.autoresizingMask = [.width, .height]
         addSubview(scrollView)
 
+        let topDivider = NSBox.divider()
         topDivider.frame = CGRect(x: 0, y: 52, width: bounds.width, height: 1)
         topDivider.autoresizingMask = [.width]
         addSubview(topDivider)
@@ -36,6 +40,6 @@ class KanbanView: BaseView {
     
     public override func layout() {
         super.layout()
-        boardView.frame.size.height = bounds.height - 52
+        scrollView.documentView?.frame.size.height = bounds.height - 52
     }
 }
